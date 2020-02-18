@@ -79,7 +79,9 @@ const server = http.createServer((req, res) => {
       case "POST":
         collectRequestData(req, result => {
           // console.log(result);
+
           pet.addPet(result.name);
+
           res.end(`Parsed data belonging to ${result.name}`);
         });
 
