@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "nodemon ./lesson.js",
+    "wtvr": "bash -c 'ping google.com'"
+  }
+}
