@@ -1,0 +1,16 @@
+{
+  "name": "pizzaria",
+  "version": "1.0.0",
+  "description": "A pizzaria mock system.",
+  "main": "index.js",
+  "author": "Luis Geniole",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}

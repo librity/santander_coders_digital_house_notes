@@ -61,6 +61,7 @@ const server = http.createServer((req, res) => {
   if (routes === "/newpet") {
     switch (req.method) {
       case "GET":
+        // <form action="/newpet" method="get">
         res.write(`
             <!DOCTYPE html>
             <html>

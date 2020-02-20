@@ -1,0 +1,22 @@
+[
+  {
+    "nome": "Pepperoni",
+    "ingredientes": ["mussarela", "pepperoni", "orégano"]
+  },
+  {
+    "nome": "Marguerita",
+    "ingredientes": ["mussarela", "tomate", "manjericão"]
+  },
+  {
+    "nome": "Mussarela",
+    "ingredientes": ["mussarela"]
+  },
+  {
+    "nome": "Quatro Queijos",
+    "ingredientes": ["gorgonzola", "mussarela", "parmesão", "catupiry"]
+  },
+  {
+    "nome": "Moda da Casa",
+    "ingredientes": ["banana", "canela", "ovo", "bacon", "uva passa"]
+  }
+]
