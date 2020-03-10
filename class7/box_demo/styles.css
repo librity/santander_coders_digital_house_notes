@@ -1,0 +1,18 @@
+.box {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+}
+
+#box1 {
+  background-color: red;
+}
+
+#box2 {
+  background-color: green;
+  /* display: none; */
+}
+
+#box3 {
+  background-color: blue;
+}

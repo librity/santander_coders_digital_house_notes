@@ -1,24 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #666;
-}
-
-a:active {
-  color: #444;
+  color: #000;
+  border: none;
+  border-bottom: none;
 }
 
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
+
+  min-height: 100vh;
 }
 
 header {
@@ -33,29 +29,90 @@ header {
   border-bottom: 1px solid #eee;
 }
 
-header div {
+header #logo {
   display: flex;
   flex: 1;
   align-items: center;
 }
 
-header nav a {
+header nav {
   margin-right: 20px;
 }
 
-div #welcome {
+header nav a {
+  margin-left: 100px;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #5a458c;
+  border-bottom: 1px solid #5a458c;
+}
+
+header nav a:active {
+  color: #fff;
+}
+
+#welcome {
   background-image: url("./media/img/banner.jpg");
-  padding-top: 500px;
-  height: 500px;
+  height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   text-align: center;
+  flex: 1;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  color: #fff;
 }
 
-#intro {
-  
+#products {
+  display: flex;
+  min-height: 100vh;
+}
+
+.product {
+  width: 200;
+  height: 200;
+}
+
+#product1 {
+  background-image: url("./media/img/product-1.jpg");
+  background-repeat: no-repeat;
+}
+
+#product2 {
+  background-image: url("./media/img/product-2.jpg");
+  background-repeat: no-repeat;
+}
+
+#product3 {
+  background-image: url("./media/img/product-3.jpg");
+  background-repeat: no-repeat;
+}
+
+#product4 {
+  background-image: url("./media/img/product-4.jpg");
+  background-repeat: no-repeat;
+}
+
+#product5 {
+  background-image: url("./media/img/product-5.jpg");
+  background-repeat: no-repeat;
+}
+
+#product6 {
+  background-image: url("./media/img/product-6.jpg");
+  background-repeat: no-repeat;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40px;
+  background-color: purple;
 }
