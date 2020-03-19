@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head') %>
+
+  <body>
+    <%- include('includes/header') %>
+
+    <main class="container pt-2">
+      <section class="row">
+        <div class="img">
+          <img src="/img/about.svg" alt="" srcset="" />
+        </div>
+
+        <article class="text-center p-5">
+          <h1>Eu sou</h1>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
+            delectus id. Provident fuga debitis sint deleniti. Libero commodi
+            nihil delectus excepturi asperiores beatae illo quidem cumque
+            aperiam non, voluptates distinctio.
+          </p>
+        </article>
+      </section>
+
+      <section class="row p-5 bg-light">
+        <div class="col-12 pb-3">
+          <h1 class="text-center">Projetos</h1>
+        </div>
+
+        <% if (listaDeProjetos) { %> <%listaDeProjetos.forEach( project => {%>
+
+        <div class="col-md-4 pb-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-primary"><%= project.nome %></h5>
+
+              <p class="card-text">
+                <%= project.descricao %>
+              </p>
+
+              <p class="card-text text-secondary" style="font-style: italic;">
+                Tecnologia: <%= project.tecnologia %>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <% }) } else { %>
+
+        <div class="col-md-4">
+          <h6>Sem projetos.</h6>
+        </div>
+
+        <% } %>
+      </section>
+    </main>
+
+    <%- include('includes/bootstrap_scrypt') %>
+  </body>
+</html>
