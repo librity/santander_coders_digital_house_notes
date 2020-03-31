@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const cors = require("cors");
 
 const rotasUsuario = require("./routes/usuarioRoute");
 const rotasCardapio = require("./routes/cardapioRoute");
@@ -13,6 +14,7 @@ app.set("views", path.join(__dirname, "/views"));
 app.use(express.static(path.join("/public")));
 
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.get("/", (req, res) => {
   const { nome } = req.query;

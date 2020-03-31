@@ -17,7 +17,15 @@ let cardapioController = {
   criarPizza: (req, res) => {
     Cardapio.cadastrarPizza(req.body.nomePizza, req.body.precoPizza);
 
-    res.redirect("/cardapio/ver");
+    req.method = 'GET';
+    return res.status(300).redirect("/cardapio/ver").end();
+  },
+
+  deletePizza: (req, res) => {
+    Cardapio.destroyPizza(req.body.id);
+
+    req.method = 'GET ';
+    return res.status(300).redirect("/cardapio/ver").end();
   }
 };
 

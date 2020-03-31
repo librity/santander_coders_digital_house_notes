@@ -1,16 +1,18 @@
-const express = require('express')
-const cardapioController = require('../controllers/cardapioController');
+const {Router} = require("express");
+const cardapioController = require("../controllers/cardapioController");
 
-let route = express.Router()
-//rotas a partir daqui!
 
-route.get('/cadastrar/:pizza/:preco', (req, res)=>{
-    res.send("Cadastrou pizza com sucesso!")
-})
+const route = Router();
 
-route.get('/ver', cardapioController.listarCardapio)
-route.get('/cadastro', cardapioController.viewFormCadastro)
+route.get("/cadastrar/:pizza/:preco", (req, res) => {
+  res.send("Cadastrou pizza com sucesso!");
+});
 
-route.post('/cadastro', cardapioController.criarPizza)
+route.get("/ver", cardapioController.listarCardapio);
+route.get("/cadastro", cardapioController.viewFormCadastro);
 
-module.exports = route
+route.post("/cadastro", cardapioController.criarPizza);
+
+route.post("/delete", cardapioController.deletePizza);
+
+module.exports = route;
