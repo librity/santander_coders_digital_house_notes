@@ -17,15 +17,14 @@ let cardapioController = {
   criarPizza: (req, res) => {
     Cardapio.cadastrarPizza(req.body.nomePizza, req.body.precoPizza);
 
-    req.method = 'GET';
-    return res.status(300).redirect("/cardapio/ver").end();
+    return res.redirect("/cardapio/ver");
   },
 
   deletePizza: (req, res) => {
     Cardapio.destroyPizza(req.body.id);
 
-    req.method = 'GET ';
-    return res.status(300).redirect("/cardapio/ver").end();
+
+    return res.redirect("/cardapio/ver");
   }
 };
 

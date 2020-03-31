@@ -1,1 +1,8 @@
-[{"id":1,"nome":"Calamussa","preco":"R$30,00"},{"id":2,"nome":"Frango com Catupiry","preco":"R$35,00"},{"id":3,"nome":"Romanesca","preco":"R$35,00"},{"id":5,"nome":"Calabresa","preco":"R$35,00"},{"id":6,"nome":"Catupiry com Bacon","preco":"R$40,00"}]
+[
+  { "id": 1, "nome": "Calamussa", "preco": "R$30,00" },
+  { "id": 2, "nome": "Frango com Catupiry", "preco": "R$35,00" },
+  { "id": 3, "nome": "Romanesca", "preco": "R$35,00" },
+  { "id": 4, "nome": "Marguerita", "preco": "R$25,00" },
+  { "id": 5, "nome": "Calabresa", "preco": "R$35,00" },
+  { "id": 6, "nome": "Catupiry com Bacon", "preco": "R$40,00" }
+]
