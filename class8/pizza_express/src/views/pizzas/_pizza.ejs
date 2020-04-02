@@ -1,0 +1,17 @@
+<div class="col-md-4 p-1">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= pizza.nome %></h5>
+
+      <p class="card-text">R$ <%= pizza.preco %></p>
+
+      <form action="/cardapio/delete" method="POST">
+        <div class="card-footer">
+          <input type="text" name="id" value="<%= pizza.id %>" hidden />
+
+          <button type="submit" class="btn btn-danger">Deletar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

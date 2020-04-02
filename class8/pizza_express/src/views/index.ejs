@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../includes/head', { title:"Pizzaria" })%>
+  <%- include('./shared/_head', { title: "Pizzaria" })%>
   <body>
-    <%- include('../includes/header')%>
+    <%- include('./shared/_header')%>
 
     <h1>Olá <%= test %></h1>
     <ul>
@@ -11,6 +11,6 @@
       <% }) %>
     </ul>
 
-    <%- include('includes/bootstrap_scripts') %>
+    <%- include('./shared/_bootstrap') %>
   </body>
 </html>

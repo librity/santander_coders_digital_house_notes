@@ -1,12 +1,11 @@
 import { Router } from 'express';
 
-const OrdersController = require('../controllers/OrdersController');
+import OrdersController from '../controllers/OrdersController';
 
 const ordersRoutes = Router();
 
-ordersRoutes.get('/cadastro', OrdersController.viewFormPedido);
+ordersRoutes.get('/new', OrdersController.neW);
 
-ordersRoutes.post('/cadastro', OrdersController.criarPedido);
-ordersRoutes.get('/teste', OrdersController.criarPedido);
+ordersRoutes.post('/', OrdersController.create);
 
 export default ordersRoutes;

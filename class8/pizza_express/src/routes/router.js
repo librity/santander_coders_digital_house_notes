@@ -1,22 +1,17 @@
 import { Router } from 'express';
 
+import staticPagesRoutes from './staticPagesRoutes';
 import usersRoutes from './usersRoutes';
 import menuRoutes from './menuRoutes';
 import ordersRoutes from './ordersRoutes';
+import pizzasRoutes from './pizzasRoutes';
 
 const router = Router();
 
-router.get('/', (req, res) => {
-  const { name } = req.query;
-
-  res.render('admin/index', {
-    products: ['produtos1', 'produtos2', 'produtos3', 'produtos4'],
-    test: name,
-  });
-});
-
+router.use('/', staticPagesRoutes);
 router.use('/users', usersRoutes);
 router.use('/menu', menuRoutes);
 router.use('/orders', ordersRoutes);
+router.use('/pizzas', pizzasRoutes);
 
 export default router;

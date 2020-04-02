@@ -1,9 +1,11 @@
+import 'dotenv/config';
+
 import express from 'express';
 import path from 'path';
 import cors from 'cors';
 import methodOverride from 'method-override';
 
-import youchConfig from './config/youchConfig';
+import youch from './config/youch';
 import router from './routes/router';
 
 const app = express();
@@ -19,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(methodOverride('_method'));
 
-app.use(youchConfig);
+app.use(youch);
 
 app.use(router);
 

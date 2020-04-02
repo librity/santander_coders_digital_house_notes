@@ -1,9 +1,11 @@
-export default class pedidoController {
-  viewFormPedido(req, res) {
-    res.render('criarPedido');
+class OrdersController {
+  neW(req, res) {
+    res.render('orders/new');
   }
 
-  criarPedido(req, res) {
-    res.render('sucessPedido', req.query);
+  create(req, res) {
+    res.render('orders/success', req.query);
   }
 }
+
+export default new OrdersController();
