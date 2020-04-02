@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('includes/head', { title: 'Menu' })%>
+
+  <body>
+    <%- include('includes/header') %>
+    <div class="container">
+      <section class="row p-5">
+        <% if(cardapio != undefined && cardapio.length > 0) {
+        cardapio.forEach(pizza =>{ %>
+
+        <div class="col-md-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= pizza.nome %></h5>
+
+              <p class="card-text">R$ <%= pizza.preco %></p>
+
+              <form action="/cardapio/delete" method="POST">
+                <div class="card-footer">
+                  <input type="text" name="id" value="<%= pizza.id %>" hidden />
+                  <button type="submit" class="btn btn-danger">Deletar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <% }) } else { %>
+
+        <h1>Não tem pizzas cadastradas no sistema!</h1>
+
+        <% } %>
+
+        <div class="col-12 mt-5">
+          <a href="/cardapio/cadastro" class="btn btn-primary">
+            Cadastrar Nova pizza
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <%- include('includes/bootstrap_scripts') %>
+  </body>
+</html>
