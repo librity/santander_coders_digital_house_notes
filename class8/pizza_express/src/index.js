@@ -13,7 +13,11 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.set('views', join(__dirname, '/views'));
+
 app.use(expressLayouts);
+app.set('layout extractScripts', true)
+app.set('layout extractStyles', true)
+app.set('layout extractMetas', true)
 
 app.use(express.static(resolve(__dirname, '..', 'public')));
 
