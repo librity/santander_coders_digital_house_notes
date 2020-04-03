@@ -1,9 +1,9 @@
-import multer from 'multer';
-import crypto from 'crypto';
+import { diskStorage } from 'multer';
+import { randomBytes } from 'crypto';
 import { extname, resolve } from 'path';
 
 const pizzaThumbnails = {
-  storage: multer.diskStorage({
+  storage: diskStorage({
     destination: resolve(
       __dirname,
       '..',
@@ -14,7 +14,7 @@ const pizzaThumbnails = {
     ),
 
     filename: (req, file, cb) => {
-      crypto.randomBytes(10, (err, res) => {
+      randomBytes(10, (err, res) => {
         if (err) return cb(err);
 
         const { name } = req.body;

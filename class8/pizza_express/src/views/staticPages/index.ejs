@@ -1,0 +1,11 @@
+<%- contentFor('title') %>
+Pizzaria
+
+<%- contentFor('body') %>
+<h1>Olá <%= test %></h1>
+<ul>
+  <% products.forEach(product=>{ %>
+  <li><%= product %></li>
+  <% }) %>
+</ul>
+

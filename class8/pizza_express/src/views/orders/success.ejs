@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <%- include('../shared/_head', { title: "Sucesso" }) %>
+<%- contentFor('title') %>
+Sucesso
 
-  <body>
-    <%- include('../shared/_header') %>
-
-    <main class="container">
-      <div class="alert alert-success" role="alert">
-        Olá <%= nomeComprador %>,seu pedido da pizza <%= nomePizza %> foi feito
-        com sucesso!
-      </div>
-    </main>
-
-    <%- include('../shared/_bootstrap') %>
-  </body>
-</html>
+<%- contentFor('body') %>
+<main class="container">
+  <div class="alert alert-success" role="alert">
+    Olá <%= name %>,seu pedido da pizza <%= pizzaName %> foi feito
+    com sucesso!
+  </div>
+</main>

@@ -1,7 +1,8 @@
 import 'dotenv/config';
 
 import express from 'express';
-import path from 'path';
+import expressLayouts from 'express-ejs-layouts';
+import { join, resolve } from 'path';
 import cors from 'cors';
 import methodOverride from 'method-override';
 
@@ -11,11 +12,12 @@ import router from './routes/router';
 const app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', join(__dirname, '/views'));
+app.use(expressLayouts);
 
-app.use(express.static(path.resolve(__dirname, '..', 'public')));
+app.use(express.static(resolve(__dirname, '..', 'public')));
 
-app.use(express.static(path.join('/public')));
+app.use(express.static(join('/public')));
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());

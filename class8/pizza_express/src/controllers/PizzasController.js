@@ -8,7 +8,7 @@ class PizzasController {
   }
 
   neW(req, res) {
-    res.render('/pizzas/new');
+    res.render('pizzas/new');
   }
 
   create(req, res) {

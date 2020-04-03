@@ -4,7 +4,7 @@ import multer from 'multer';
 import { pizzaThumbnails } from '../config/multer';
 import PizzasController from '../controllers/PizzasController';
 
-const upload = multer({ storage: pizzaThumbnails });
+const upload = multer(pizzaThumbnails);
 
 const pizzasRoutes = Router();
 

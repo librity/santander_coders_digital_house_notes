@@ -1,11 +1,11 @@
-import fs from 'fs';
-import path from 'path';
+import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 
-const db = path.join('data', 'pizzas.json');
+const db = join('data', 'pizzas.json');
 
 class Pizza {
   constructor(name, price) {
-    const rawPizzas = fs.readFileSync(db, { encoding: 'utf-8' });
+    const rawPizzas = readFileSync(db, { encoding: 'utf-8' });
 
     const empty = rawPizzas == '' || rawPizzas == '[]';
 
@@ -17,7 +17,7 @@ class Pizza {
 
     pizzas.push({ id: this.id, name: this.name, price: this.price });
 
-    fs.writeFileSync(db, JSON.stringify(pizzas));
+    writeFileSync(db, JSON.stringify(pizzas));
 
     return pizzas;
   }
@@ -27,7 +27,7 @@ class Pizza {
   }
 
   static all() {
-    const rawPizzas = fs.readFileSync(db, { encoding: 'utf-8' });
+    const rawPizzas = readFileSync(db, { encoding: 'utf-8' });
 
     const empty = rawPizzas == '' || rawPizzas == '[]';
     if (empty) return undefined;
@@ -42,7 +42,7 @@ class Pizza {
   }
 
   deletePizza(id) {
-    const rawPizzas = fs.readFileSync(db, { encoding: 'utf-8' });
+    const rawPizzas = readFileSync(db, { encoding: 'utf-8' });
 
     const empty = rawPizzas == '' || rawPizzas == '[]';
     if (empty) return undefined;
@@ -51,7 +51,7 @@ class Pizza {
 
     const newPizzas = pizzas.filter((pizza) => pizza.id != id);
 
-    fs.writeFileSync(db, JSON.stringify(newPizzas));
+    writeFileSync(db, JSON.stringify(newPizzas));
 
     return newPizzas;
   }

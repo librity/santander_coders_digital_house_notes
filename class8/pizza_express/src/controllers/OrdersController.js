@@ -4,7 +4,9 @@ class OrdersController {
   }
 
   create(req, res) {
-    res.render('orders/success', req.query);
+    const { name, address, pizzaName } = req.body;
+
+    res.render('orders/success', { name, address, pizzaName });
   }
 }
 

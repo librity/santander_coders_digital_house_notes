@@ -1,24 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <%- include('../shared/_head', { title: 'Menu' })%>
+<%- contentFor('title') %>
+Menu
 
-  <body>
-    <%- include('../shared/_header') %>
-    <div class="container">
-      <section class="row p-5">
-        <% if(pizzas != undefined && pizzas.length > 0) { %>
-        <% pizzas.forEach(pizza =>{  %>
-        
-          <%-  include('./_pizza', { pizza }) %>
-        
-        <% }) } else { %>
-
-        <h1>Não tem pizzas cadastradas no sistema!</h1>
-
-        <% } %>
-      </section>
-    </div>
-
-    <%- include('../shared/_bootstrap') %>
-  </body>
-</html>
+<%- contentFor('body') %>
+<div class="container">
+  <section class="row p-5">
+    <% if(pizzas != undefined && pizzas.length > 0) { %>
+    <% pizzas.forEach(pizza =>{  %>
+    
+      <%-  include('./_pizza', { pizza }) %>
+    
+    <% }) } else { %>
+    <h1>Não tem pizzas cadastradas no sistema!</h1>
+    <% } %>
+  </section>
+</div>
