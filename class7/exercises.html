@@ -116,13 +116,614 @@
   <head>
     <title>Iframes</title>
   </head>
+
   <body>
     <iframe
-      src="https://www.youtube.com/watch?v=O5LOlK1EfJU"
-      width="300"
-      height="300"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/O5LOlK1EfJU"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
     ></iframe>
   </body>
 </html>
+
+<br />
+
+<html>
+  <head>
+    <title>Um pouco de semântica</title>
+  </head>
+  <body>
+    <p>
+      Talvez, isso explique a razão do jogador Leonardo ter declarado a seguinte
+      frase:
+      <em>
+        "Se as pessoas soubessem o que aconteceu na Copa do Mundo, ficariam
+        enojadas".
+      </em>
+      <mark>
+        Todos os brasileiros ficaram chocados e tristes por terem perdido a Copa
+        do Mundo de futebol, na França.
+      </mark>
+      <strong>Não deveriam.</strong>
+    </p>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Primeiro formulario</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="post">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="id" />
+
+      <button type="submit">Entrar</button>
+    </form>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Primeiro formulario</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="post">
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" />
+
+      <button type="submit">Entrar</button>
+    </form>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Formulario de registro</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="POST">
+      <p>
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" />
+      </p>
+
+      <p>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+      </p>
+
+      <p>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" />
+      </p>
+
+      <button type="submit">Entrar</button>
+    </form>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Formulario de registro</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="POST">
+      <p>
+        <label>Nome:</label>
+        <input type="text" name="nome" required />
+      </p>
+
+      <p>
+        <label>E-mail:</label>
+        <input type="email" name="email" required />
+      </p>
+
+      <p>
+        <label>Senha:</label>
+        <input type="password" name="senha" required />
+      </p>
+
+      <p>
+        <input type="submit" value="ENVIAR" required />
+      </p>
+    </form>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Formularios</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="POST">
+      <label for="pet">Você tem um pet?</label>
+      <input type="radio" name="pet" id="sim" value="s" />
+      <label for="sim">Sim</label>
+      <input type="radio" name="pet" id="nao" value="n" />
+      <label for="nao">Nao</label>
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Formularios</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="POST">
+      <label for="hobby">Quais sao os seus hobbies?</label>
+      <input type="checkbox" name="hobby" id="pescar" value="pescar" />
+      <label for="pescar">Pescar</label>
+      <input type="checkbox" name="hobby" id="correr" value="correr" />
+      <label for="correr">Correr</label>
+      <input type="checkbox" name="hobby" id="yoga" value="yoga" />
+      <label for="yoga">Yoga</label>
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Formulários</title>
+  </head>
+  <body>
+    <form action="index.html" method="POST">
+      <label>Selecione o mês do seu aniversário</label>
+      <select name="mes" id="mes">
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+      </select>
+
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Formularios</title>
+  </head>
+  <body>
+    <form action="resultado.html" method="POST">
+      <label>Deixe seu comentário</label>
+      <textarea
+        name="comentario"
+        id="comentario"
+        cols="30"
+        rows="10"
+      ></textarea>
+
+      <button type="submit">Enviar</button>
+      <button type="reset">Apagar</button>
+    </form>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Tags inline</title>
+  </head>
+  <body>
+    <p>
+      <span>Oi, oi, oi,</span>
+      <a href="#">Oi, oi, oi, oi</a>
+      Vem pra quebrar com tudo Vamos dançar com tudo
+    </p>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Tags block</title>
+  </head>
+  <body>
+    <p>
+      Eu cheguei em frente ao portão
+      <!-- <div> -->
+      Meu cachorro me sorriu latindo
+      <!-- </div> -->
+      Minhas malas coloquei no chão Eu voltei
+    </p>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Estrutura semântica</title>
+  </head>
+  <body>
+    <header>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est neque,
+      dictum sed porta sed, ornare eu dolor.
+    </header>
+    <section>
+      <h3>Vestibulum ante ipsum</h3>
+      <article>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est
+        neque, dictum sed porta sed, ornare eu dolor. Suspendisse tincidunt
+        blandit volutpat. Fusce volutpat odio urna. Curabitur tempus metus sit
+        amet eros accumsan efficitur. Duis vulputate, libero eu tincidunt
+        faucibus, massa quam efficitur odio, a sagittis ex libero nec purus.
+      </article>
+      <h3>Pellentesque venenatis dui</h3>
+      <article>
+        Pellentesque venenatis dui vel turpis accumsan, non ultrices leo
+        pharetra. Vestibulum ante ipsum primis in faucibus orci luctus et
+        ultrices posuere cubilia Curae; Suspendisse suscipit efficitur nibh.
+        Aliquam quis luctus dolor, sed tristique nibh. Pellentesque cursus urna
+        ut nisl congue ornare.
+      </article>
+    </section>
+    <footer>
+      Curabitur tempus metus sit amet eros accumsan efficitur. Duis vulputate,
+      libero eu tincidunt faucibus, massa quam efficitur odio, a sagittis ex
+      libero nec purus. Pellentesque venenatis dui vel turpis accumsan, non
+      ultrices leo pharetra. Vestibulum ante ipsum primis in faucibus orci
+      luctus et ultrices posuere cubilia Curae;
+    </footer>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <title>Position Fixed</title>
+  </head>
+  <body>
+    <h2>TARANTINO'S MOVIES</h2>
+    <ul class="nav-bar">
+      <li><a href="#kill-bill">Kill Bill</a></li>
+      <li><a href="#pulp-fiction">Pulp Fiction</a></li>
+      <li><a href="#once-upon">Once Upon a Time In Hollywood</a></li>
+      <li><a href="#reservouir-dogs">Reresvouir Dogs</a></li>
+    </ul>
+
+    <h3 id="kill-bill">Kill Bill</h3>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
+      nesciunt impedit reiciendis blanditiis? Minima quia doloribus similique
+      consequuntur eos in aperiam enim ad atque tenetur. Fuga soluta perferendis
+      deserunt. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Veniam debitis labore similique necessitatibus magni aspernatur. Delectus
+      nobis earum asperiores quam quas, veniam incidunt deserunt repellat
+      laboriosam voluptatem pariatur, quibusdam quos? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Sit tenetur temporibus hic, molestias quidem
+      id quisquam perspiciatis repudiandae! Voluptatibus sequi necessitatibus
+      distinctio corporis asperiores excepturi consequatur magnam inventore
+      reiciendis dicta?
+    </p>
+
+    <h3 id="pulp-fiction">Pulp Fiction</h3>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
+      nesciunt impedit reiciendis blanditiis? Minima quia doloribus similique
+      consequuntur eos in aperiam enim ad atque tenetur. Fuga soluta perferendis
+      deserunt. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Veniam debitis labore similique necessitatibus magni aspernatur. Delectus
+      nobis earum asperiores quam quas, veniam incidunt deserunt repellat
+      laboriosam voluptatem pariatur, quibusdam quos? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Sit tenetur temporibus hic, molestias quidem
+      id quisquam perspiciatis repudiandae! Voluptatibus sequi necessitatibus
+      distinctio corporis asperiores excepturi consequatur magnam inventore
+      reiciendis dicta?
+    </p>
+
+    <h3 id="once-upon">Once Upon a Time In Hollywood</h3>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
+      nesciunt impedit reiciendis blanditiis? Minima quia doloribus similique
+      consequuntur eos in aperiam enim ad atque tenetur. Fuga soluta perferendis
+      deserunt. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Veniam debitis labore similique necessitatibus magni aspernatur. Delectus
+      nobis earum asperiores quam quas, veniam incidunt deserunt repellat
+      laboriosam voluptatem pariatur, quibusdam quos? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Sit tenetur temporibus hic, molestias quidem
+      id quisquam perspiciatis repudiandae! Voluptatibus sequi necessitatibus
+      distinctio corporis asperiores excepturi consequatur magnam inventore
+      reiciendis dicta?
+    </p>
+
+    <h3 id="reservouir-dogs">Reresvouir Dogs</h3>
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias
+      nesciunt impedit reiciendis blanditiis? Minima quia doloribus similique
+      consequuntur eos in aperiam enim ad atque tenetur. Fuga soluta perferendis
+      deserunt. Sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Veniam debitis labore similique necessitatibus magni aspernatur. Delectus
+      nobis earum asperiores quam quas, veniam incidunt deserunt repellat
+      laboriosam voluptatem pariatur, quibusdam quos? Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Sit tenetur temporibus hic, molestias quidem
+      id quisquam perspiciatis repudiandae! Voluptatibus sequi necessitatibus
+      distinctio corporis asperiores excepturi consequatur magnam inventore
+      reiciendis dicta?
+    </p>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Bootstrap</title>
+  </head>
+
+  <body></body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Olá a todos</h2>
+      <div>Testando as classes do Bootstrap</div>
+    </div>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h2>Olá a todos!</h2>
+      <div>Testando as classes Bootstrap</div>
+    </div>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Bem-vindo(a)!</h2>
+      <div>Aqui estamos implementando o sistema grid do Bootstrap</div>
+
+      <div class="row">
+        <div class="col-12">Este é um bloco com 12 colunas</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Bem-vindo(a)!</h2>
+      <div>Aqui estamos implementando o sistema grid do Bootstrap</div>
+
+      <div class="row">
+        <div class="col-12">Este é um bloco com 12 colunas</div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">4 colunas</div>
+        <div class="col-5">5 colunas</div>
+        <div class="col-3">3 colunas</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Bem vindo(a)</h2>
+      <div>Implementando a grid do Bootstrap</div>
+
+      <div class="row">
+        <div class="col-12">Bloco de 12 colunas</div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">4 colunas</div>
+        <div class="col-5">5 colunas</div>
+        <div class="col-3">3 colunas</div>
+      </div>
+
+      <div class="row">
+        <div class="col-6">6 colunas</div>
+        <div class="col-6">6 colunas</div>
+      </div>
+
+      <div class="row">
+        <div class="col-10">10 colunas</div>
+        <div class="col-2">2 colunas</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/  bootstrap.min.css"
+    />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Galeria de fotos</h2>
+
+      <div class="row">
+        <div class="col-md-4 col-lg-6">
+          <p>cachorro</p>
+        </div>
+
+        <div class="col-md-4 col-lg-6">
+          <p>hamster</p>
+        </div>
+
+        <div class="col-md-4 col-lg-12">
+          <p>gato</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<br />
+
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <title>Bootstrap</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Lista para Noite do Hambúrguer</h2>
+      <ul class="list-group">
+        <li class="list-group-item active">4 caixas de hambúrger</li>
+        <li class="list-group-item">12 sacos de pão</li>
+        <li class="list-group-item">2 ketchup</li>
+        <li class="list-group-item">2 mostarda</li>
+        <li class="list-group-item">1 maionese</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<br />
 
 <br />

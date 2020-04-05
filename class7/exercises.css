@@ -41,3 +41,278 @@ p {
   text-decoration: underline;
   text-align: center;
 }
+
+/* break */
+
+body {
+  background-image: url("https://images3.alphacoders.com/621/621682.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  background-color: black;
+  stroke-opacity: 0.8;
+  color: #f4e033;
+}
+
+h2 {
+  background-color: orange;
+  color: white;
+  opacity: 0.4;
+}
+
+/* break */
+
+.div-acima {
+  color: lightseagreen;
+  display: inline;
+}
+
+.span-grande {
+  color: lightskyblue;
+}
+
+.span-pequeno {
+  color: lightcoral;
+  display: block;
+}
+
+.div-abaixo {
+  color: lightslategray;
+  display: none;
+}
+
+/* break */
+
+div {
+  width: 100px;
+  border: solid red 1px;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 10px;
+}
+
+/* break */
+
+header {
+  background-color: lightseagreen;
+  color: white;
+  font-size: 28px;
+  border-bottom: solid indigo 3px;
+  padding: 22px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+section {
+  width: 50%;
+  margin-left: 25%;
+  background-color: gainsboro;
+  margin-bottom: 15px;
+  padding-left: 12px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: dashed black 1px;
+  border-radius: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: rebeccapurple;
+  color: white;
+  border-top: solid lightseagreen 1px;
+  padding: 12px;
+  height: 40px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* break */
+
+section {
+  overflow: hidden;
+}
+
+article {
+  float: left;
+  width: 50%;
+}
+
+/* break */
+
+section {
+  background-color: lightseagreen;
+  padding: 40px;
+  overflow: hidden;
+}
+
+article {
+  float: left;
+  width: 20%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  text-align: center;
+  border-left: solid dodgerblue 5px;
+  box-sizing: border-box;
+}
+
+/* break */
+
+.primeiro {
+  position: relative;
+  left: 20px;
+  top: 30px;
+}
+
+.segundo {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}
+
+/* break */
+
+.container {
+  position: relative;
+}
+
+.gorro {
+  position: absolute;
+  width: 120px;
+  left: 70px;
+}
+
+.gato {
+  position: relative;
+  top: 12px;
+}
+
+/* break */
+
+.nav-bar {
+  position: fixed;
+  top: 5px;
+  width: 100%;
+}
+
+/* break */
+
+.amarelo {
+  position: relative;
+  top: 20px;
+}
+
+.vermelho {
+  position: relative;
+  z-index: 10;
+}
+
+/* break */
+
+.acima {
+  background-color: blueviolet;
+  height: 40vh;
+  width: 100%;
+}
+
+.abaixo {
+  background-color: brown;
+  height: 60vh;
+  width: 100%;
+}
+
+/* break */
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+/* break */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* break */
+
+.frase-cortazar {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* break */
+
+.frase {
+  display: flex;
+  width: 350px;
+  flex-direction: row-reverse;
+}
+
+/* break */
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ligacoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+}
+
+/* break */
+
+.jogo-dardos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* break */
+
+.homer-sapiens {
+  display: flex;
+  width: 50%;
+}
+
+.sapiens-5 {
+  order: 1;
+}
+
+/* break */
+
+.surf-no-mar {
+  display: flex;
+  width: 100%;
+}
+
+.prancha {
+  order: -1;
+}
+
+/* break */
+
+.tetris {
+  display: flex;
+}
+
+.peca-tetris {
+  align-self: flex-end;
+}
+
+/* break */
+
+.list-group-item.active {
+  background-color: lightseagreen;
+  border-color: lightskyblue;
+  border-width: 2px;
+}
+
+/* break */
