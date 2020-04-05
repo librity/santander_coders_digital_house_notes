@@ -1,0 +1,472 @@
+/* -- General Area Begin -- */
+
+* {
+  font-family: arial;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+}
+
+body.contact-body {
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+}
+
+/* -- General Area End -- */
+
+/* -- Header Area Begin -- */
+
+header a {
+  text-decoration: none;
+  color: #000;
+}
+
+header a:hover {
+  color: #5f4a90;
+  text-decoration: underline;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 0 8px 0 #676565;
+}
+
+header .logo-content {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header .logo-content img {
+  width: 10%;
+}
+
+header .container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+header .container ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+header .container ul li {
+  list-style: none;
+}
+
+header .container ul .toggle-menu {
+  color: purple;
+  display: none;
+}
+
+/* -- Header Area End -- */
+
+/* -- Home Area Begin -- */
+
+.home-content {
+  width: 100%;
+  height: 100vh;
+}
+
+.home-content .image-banner {
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/banner.jpg');
+  background-size: cover;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: flex-end;
+  background-position: center;
+}
+
+.home-content .image-banner h1 {
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: lighter;
+  font-size: 1em;
+}
+
+.home-content .image-banner p {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 1%;
+}
+
+.home-content .image-banner button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 35px;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 2%;
+  margin-bottom: 7%;
+}
+
+/* -- Home Area End -- */
+
+/* -- Products Area Begin -- */
+
+.products-content {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: space-between;
+  background-color: #fff;
+  padding: 2% 0;
+}
+
+.products-content div {
+  margin: 1%;
+  max-width: 375px;
+  height: 250px;
+}
+
+.products-content div img {
+  height: 100%;
+}
+
+.products-content div button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 25%;
+  left: 30%;
+}
+
+/* -- Products Area End -- */
+
+/* -- All Buttons -- */
+
+.home-content .image-banner button:hover, .products-content div button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #5f4a90;
+}
+
+/* -- All Buttons End -- */
+
+/* -- Footer Area Begin -- */
+
+footer {
+  width: 100%;
+  height: 10vh;
+  background-color: #5f4a90;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* -- Footer Area End -- */
+
+/* -- Contact Area End -- */
+
+.contact-content {
+  margin: 8% auto 4%;
+  width: 40%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-between;
+  border: 1px solid #5f4a90;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-content .contact-title {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content form input, textarea {
+  width: 85%;
+  height: 5vh;
+  margin-bottom: 1%;
+  font-size: 1em;
+  outline: none;
+  resize: none;
+  border: 1px solid #5f4a90;
+  border-radius: 30px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+
+.contact-content form textarea {
+  height: 20vh;
+}
+
+.contact-content form label {
+  width: 85%;
+  margin-left: 5%;
+  margin-top: 1%;
+  font-size: 1em;
+}
+
+.contact-content form .contact-item {
+  width: 85%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.contact-content form .contact-item input {
+  width: 10%;
+  height: 25%;
+}
+
+.contact-content form .contact-item label {
+  width: 60%;
+  margin: 0%;
+}
+
+.contact-content form .contact-item button {
+  width: 50%;
+  height: 70%;
+  background-color: #5f4a90;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.4em;
+  outline: none;
+}
+
+.contact-content form .contact-item button:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+/* -- Contact Area End -- */
+
+/* -- About Area Begin -- */
+
+.about-content .about-banner {
+  height: 40%;
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  background-image: url('../img/about-banner.jpg');
+  background-size: cover;
+}
+
+.about-content .about-banner h1 {
+  font-size: 2.5em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.about-content .about-item {
+  background-color: #fff;
+  padding: 3%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-content .about-item video {
+  width: 35%;
+  height: 45vh;
+  object-fit: cover;
+}
+
+.about-content .about-item article {
+  width: 60%;
+}
+
+.about-content .about-item p {
+  margin-top: 1%;
+  text-align: justify;
+}
+
+.about-content .about-item-2 {
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f3f4;
+  border-top: #dcdcdc solid 1px;
+}
+
+.about-content .about-item-2 p {
+  margin-bottom: 1%;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+/* -- About Area End -- */
+
+/* -- Media Queries Area Begin -- */
+
+@media only screen and (max-width: 540px){
+
+  html {
+    width: 100vw;
+  }
+
+  header {
+    z-index: 2;
+    height: 10vh;
+  }
+
+  header .container {
+    width: 50%;
+  }
+
+  header .container ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+  }
+
+  header .container ul li:not(.toggle-menu) {
+    display: none;
+  }
+
+  header .container ul .toggle-menu {
+    display: block;
+    font-size: 1.3em;
+  }
+
+  header .logo-content {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  header .logo-content img {
+    width: 20%;
+  }
+
+  footer {
+    width: 100vw;
+  }
+
+  .home-content .image-banner {
+    width: 100vw;
+  }
+
+  .products-content {
+    width: 100vw;
+  }
+
+  .contact-content{
+    height: 75vh;
+    width: 80%;
+    margin: 22% auto 4%;
+  }
+
+  .contact-content .contact-item label {
+    font-size: 0.8em;
+  }
+
+  .about-content .about-banner {
+    height: 25vh;
+  }
+
+  .about-content .about-banner h1 {
+    margin-top: 10%;
+    font-size: 2em;
+  }
+
+  .about-content .about-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-content .about-item video {
+    width: 94vw;
+    margin-bottom: 10%;
+  }
+
+  .about-content .about-item article {
+    width: 94vw;
+  }
+
+  .about-content .about-item article h2 {
+    margin-bottom: 5%;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (min-width: 545px) and (max-width: 960px) {
+  header {
+    z-index: 3;
+    padding: 20px;
+    font-size: 1.3em;
+  }
+
+  header .container {
+    margin-right: 5%;
+  }
+
+  .about-content .about-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-content .about-item video {
+    margin: 5% 0 5% 0;
+    width: 70vw;
+  }
+
+  .about-content .about-item article {
+    width: 70vw;
+  }
+
+  .about-content .about-item h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .contact-content {
+    margin: 15% auto 10%;
+    width: 50vw;
+  }
+}
+
+/* -- Media Queries Area Begin -- */

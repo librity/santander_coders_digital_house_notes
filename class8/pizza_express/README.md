@@ -1,6 +1,6 @@
 # pizza_express
 
-TODO: Upload this as a serparate repo, and implement all the good stuff:
+TODO: Implement all that good stuff:
 
 - [ ] Typescript
 - [ ] TypeORM
