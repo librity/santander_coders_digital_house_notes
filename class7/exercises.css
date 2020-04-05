@@ -2,7 +2,7 @@ p {
   color: red;
 }
 
-/* break */
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 
 h3 {
   color: blue;
@@ -16,8 +16,7 @@ h3 {
   font-size: 40px;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .destacado {
   color: gold;
 }
@@ -31,8 +30,7 @@ h3 {
   color: white;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 p {
   font-family: Arial;
   font-size: 20px;
@@ -42,10 +40,9 @@ p {
   text-align: center;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 body {
-  background-image: url("https://images3.alphacoders.com/621/621682.jpg");
+  background-image: url('https://images3.alphacoders.com/621/621682.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -62,8 +59,7 @@ h2 {
   opacity: 0.4;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .div-acima {
   color: lightseagreen;
   display: inline;
@@ -83,8 +79,7 @@ h2 {
   display: none;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 div {
   width: 100px;
   border: solid red 1px;
@@ -93,8 +88,7 @@ div {
   margin: 10px;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 header {
   background-color: lightseagreen;
   color: white;
@@ -130,8 +124,7 @@ footer {
   box-sizing: border-box;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 section {
   overflow: hidden;
 }
@@ -141,8 +134,7 @@ article {
   width: 50%;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 section {
   background-color: lightseagreen;
   padding: 40px;
@@ -159,8 +151,7 @@ article {
   box-sizing: border-box;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .primeiro {
   position: relative;
   left: 20px;
@@ -173,8 +164,7 @@ article {
   bottom: 20px;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .container {
   position: relative;
 }
@@ -190,16 +180,14 @@ article {
   top: 12px;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .nav-bar {
   position: fixed;
   top: 5px;
   width: 100%;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .amarelo {
   position: relative;
   top: 20px;
@@ -210,8 +198,7 @@ article {
   z-index: 10;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .acima {
   background-color: blueviolet;
   height: 40vh;
@@ -224,37 +211,32 @@ article {
   width: 100%;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .nav-bar {
   display: flex;
   align-items: center;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .container {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .frase-cortazar {
   display: flex;
   flex-direction: column-reverse;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .frase {
   display: flex;
   width: 350px;
   flex-direction: row-reverse;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .nav-bar {
   display: flex;
   flex-direction: row;
@@ -267,16 +249,14 @@ article {
   justify-content: baseline;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .jogo-dardos {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .homer-sapiens {
   display: flex;
   width: 50%;
@@ -286,8 +266,7 @@ article {
   order: 1;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .surf-no-mar {
   display: flex;
   width: 100%;
@@ -297,8 +276,7 @@ article {
   order: -1;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .tetris {
   display: flex;
 }
@@ -307,12 +285,11 @@ article {
   align-self: flex-end;
 }
 
-/* break */
-
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .list-group-item.active {
   background-color: lightseagreen;
   border-color: lightskyblue;
   border-width: 2px;
 }
 
-/* break */
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
