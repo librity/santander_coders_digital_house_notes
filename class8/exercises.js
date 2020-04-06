@@ -362,18 +362,254 @@ if (bcrypt.compareSync('123456', hash)) console.log('a senha está correta');
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 const express = require('express');
 const multer = require('multer');
+const path = require('path');
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, '/tmp/my-uploads');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now());
+  },
+});
+
+const upload = multer({ storage: storage });
 
 const router = express.Router();
 
-router.post('/register', usersController.save);
+router.post('/register', upload.any(), usersController.save);
 
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const app = express();
+
+app.use(express.json());
+
+const router = express.Router();
+
+router.post('/criar-produto', (req, res) => {
+  console.log(req.body);
+
+  res.send('O produto foi criado com sucesso');
+});
+
+app.use(router);
+
+app.listen(3000);
 
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const app = express();
+let emManutencao = false;
+
+app.use((req, res, next) => {
+  if (emManutencao) {
+    return res.render('em-manutencao');
+  }
+
+  return next();
+});
 
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = _require('express');
+const app = express();
+const usuario = {
+  nome: 'Antônio',
+  sobrenome: 'Zizek',
+};
+
+app.use((req, res, next) => {
+  req.usuario = usuario;
+
+  return next();
+});
 
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const router = express.Router();
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, '/tmp/my-uploads');
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now());
+  },
+});
+
+const upload = multer({ storage: storage });
+
+router.post('/upload-file', upload.any(), fileController.upload);
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const router = express.Router();
+const homeController = require('../controllers/homeController');
+const estatisticasController = require('../controllers/estatisticasController');
+
+function visitasMiddleware(req, res, next) {
+  estatisticasController.contarAcesso(req);
+
+  return next();
+}
+
+router.get('/home', visitasMiddleware, homeController.index);
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const router = express.Router();
+const OldController = require('../controllers/OldController');
+
+function redirecionar(req, res, next) {
+  return res.redirect('/');
+}
+
+router.get('/rota-em-desuso', redirecionar, OldController.index);
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const router = express.Router();
+const { check, validationResult, body } = require('express-validator');
+
+const UsuarioController = require('../controllers/UsuarioController');
+
+router.post(
+  '/cadastro',
+  [check('email').isEmail(), check('password').isLength({ min: 6 })],
+  UsuarioController.registro
+);
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const { check, validationResult, body } = require('express-validator');
+
+const favoritosController = require('../controllers/favoritosController');
+
+const router = express.Router();
+
+router.post(
+  '/favoritos',
+  [
+    body('url').custom((value) => {
+      return value.indexOf('https') !== -1;
+    }),
+  ],
+  favoritosController.salvar
+);
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const { check, validationResult, body } = require('express-validator');
+
+const router = express.Router();
+
+const userController = {
+  login: (req, res) => {
+    const erros = validationResult(req);
+
+    if (!erros.isEmpty()) {
+      return res.render(erros.array());
+    }
+
+    if (req.body.name == 'admin' && req.body.pass == 123) {
+      res.redirect('/dashboard');
+    }
+  },
+};
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const session = require('express-session');
+
+const app = express();
+
+app.use(session({ secret: 'frase secreta' }));
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const session = require('express-session');
+
+const app = express();
+
+app.use(session({ secret: 'frase secreta', idioma: '' }));
+
+const alterarIdioma = (req, res) => {
+  req.session.idioma = req.query.idioma;
+
+  res.redirect('/');
+};
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+const express = require('express');
+const session = require('express-session');
+
+const app = express();
+
+app.use(session({ secret: 'frase secreta' }));
+
+const admin = (req, res) => {
+  if (req.session.admin) {
+  } else {
+    return res.redirect('/');
+  }
+};
+//^^^ABSOLUTELY DREADFUL
+const admin = (req, res, next) => {
+  if (!req.session.admin) return res.redirect('/');
+
+  return next();
+};
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+var express = require('express');
+var cookieParser = require('cookie-parser');
+
+var app = express();
+app.use(cookieParser());
+
+const index = (req, res) => {
+  res.cookie('ultimoAcesso', new Date());
+};
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+var express = require('express');
+var cookieParser = require('cookie-parser');
+
+var app = express();
+app.use(cookieParser());
+
+const index = (req, res) => {
+  let estilo;
+
+  if (!req.cookies.estilo) {
+    estilo = 'default';
+  } else {
+    estilo = req.cookies.estilo;
+  }
+
+  res.render('/', { estilo: estilo });
+};
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+var express = require('express');
+var cookieParser = require('cookie-parser');
+
+var app = express();
+app.use(cookieParser());
+
+const listaDeProdutos = {
+  vestidos: ['vestido broderie', 'vestido towel', 'vestido voile'],
+  camisetas: ['camisa de retalhos', 'camisa bordada'],
+};
+
+const recomendados = (req, res) => {
+  const preferencias = req.cookies.preferencias;
+
+  const produtos = listaDeProdutos[preferencias];
+
+  return res.render('/', { produtos });
+};
 
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 
