@@ -1,2 +1,0 @@
-# digitalHouse
-# jschallenges
