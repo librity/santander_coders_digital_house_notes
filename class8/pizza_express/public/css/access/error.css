@@ -1,0 +1,44 @@
+body {
+  background: url('/img/hackerman.png') no-repeat;
+}
+
+.board {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 150px;
+  width: 500px;
+  margin: -75px 0 0 -250px;
+  padding: 20px;
+  font: 75px/75px Monoton, cursive;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+  color: red;
+}
+
+#error {
+  color: #fff;
+  text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
+}
+
+#home {
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 40px;
+
+  transition: background 0.1s, -webkit-box-shadow 0.1s, box-shadow 2s;
+}
+
+#home:hover {
+  background: #0046d511;
+  -webkit-box-shadow: 0px 4px 15px -5px #0046d5;
+  box-shadow: 0px 4px 15px -5px #0046d5;
+}

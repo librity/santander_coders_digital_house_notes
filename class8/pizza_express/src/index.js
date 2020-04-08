@@ -15,9 +15,10 @@ app.set('view engine', 'ejs');
 app.set('views', join(__dirname, '/views'));
 
 app.use(expressLayouts);
-app.set('layout extractScripts', true)
-app.set('layout extractStyles', true)
-app.set('layout extractMetas', true)
+app.set('layout extractScripts', true);
+app.set('layout extractStyles', true);
+app.set('layout extractMetas', true);
+app.set('layout', 'layouts/default');
 
 app.use(express.static(resolve(__dirname, '..', 'public')));
 
@@ -27,9 +28,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(methodOverride('_method'));
 
-app.use(youch);
-
 app.use(router);
 
-const port = 3000;
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+app.use(youch);
+
+const port = process.env.PORT;
+app.listen(port, () => console.log(`Server 👂listening on ⚓port ${port}...`));

@@ -11,15 +11,17 @@ class Pizza {
 
     const pizzas = empty ? [] : JSON.parse(rawPizzas);
 
+    this.id = empty ? 1 : pizzas[pizzas.length - 1].id + 1;
     this.name = name;
     this.price = price;
-    this.id = empty ? 1 : pizzas[pizzas.length - 1].id + 1;
 
-    pizzas.push({ id: this.id, name: this.name, price: this.price });
+    const newPizza = { id: this.id, name: this.name, price: this.price }
+
+    pizzas.push(newPizza);
 
     writeFileSync(db, JSON.stringify(pizzas));
 
-    return pizzas;
+    return newPizza;
   }
 
   destroy() {
@@ -53,7 +55,7 @@ class Pizza {
 
     writeFileSync(db, JSON.stringify(newPizzas));
 
-    return newPizzas;
+    return true;
   }
 }
 

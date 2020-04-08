@@ -14,8 +14,8 @@ router.use('/menu', menuRoutes);
 router.use('/orders', ordersRoutes);
 router.use('/pizzas', pizzasRoutes);
 
-router.use((req,res,next)=>{
-  return res.status(404).render('not_found');
-})
+router.get('*', (req, res) => {
+  return res.status(404).render('access/404', { layout: 'layouts/error' });
+});
 
 export default router;
