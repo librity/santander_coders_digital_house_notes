@@ -1,17 +1,10 @@
 import { diskStorage } from 'multer';
 import { randomBytes } from 'crypto';
-import { extname, resolve } from 'path';
+import { extname, join } from 'path';
 
-const pizzaThumbnails = {
+export default {
   storage: diskStorage({
-    destination: resolve(
-      __dirname,
-      '..',
-      '..',
-      'public',
-      'uploads',
-      'pizzaThumbnails'
-    ),
+    destination: join('public', 'uploads', 'pizzaThumbnails'),
 
     filename: (req, file, cb) => {
       randomBytes(10, (err, res) => {
@@ -26,11 +19,9 @@ const pizzaThumbnails = {
             Date.now() +
             '-' +
             name +
-            +extname(file.originalname)
+            extname(file.originalname)
         );
       });
     },
   }),
 };
-
-export default { pizzaThumbnails };

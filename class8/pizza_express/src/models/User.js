@@ -27,31 +27,22 @@ class User {
 
     return users;
   }
-}
 
-function cadastrarUsuario(nome, email, senha) {
-  const novoUsuario = {
-    nome,
-    email,
-    senha,
-  };
+  static findByEmail(email) {
+    const rawUsers = readFileSync(db, { encoding: 'utf-8' });
 
-  let listaDeUsuarios = JSON.parse(fs.readFileSync(db, { encoding: 'utf-8' }));
+    const empty = rawUsers == '' || rawUsers == '[]';
 
-  listaDeUsuarios.push(novoUsuario);
-  fs.writeFileSync(db, JSON.stringify(listaDeUsuarios));
+    if (empty) return null;
 
-  return true;
-}
+    const users = JSON.parse(rawUsers);
 
-function buscarUsuario(email) {
-  let listaDeUsuarios = JSON.parse(fs.readFileSync(db, { encoding: 'utf-8' }));
+    let [user] = users.filter((user, index) => {
+      return user.email === email;
+    });
 
-  let [usuario] = listaDeUsuarios.filter((usuario, index) => {
-    return usuario.email == email;
-  });
-
-  return usuario;
+    return user;
+  }
 }
 
 export default User;

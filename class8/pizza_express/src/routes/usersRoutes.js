@@ -1,11 +1,10 @@
 import { Router } from 'express';
 
+import UsersController from '../controllers/UsersController';
+
 const usersRoutes = Router();
 
-usersRoutes.get('/:nome', (req, res) => {
-  const { name } = req.params;
-
-  res.send(`Seja bem vindo ${name}`).end();
-});
+usersRoutes.get('/new', UsersController.neW);
+usersRoutes.post('/', UsersController.create);
 
 export default usersRoutes;

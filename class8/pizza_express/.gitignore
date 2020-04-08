@@ -116,7 +116,11 @@ yarn-error.log
 # Typescript build directory
 ./dist
 
+# Node Modules, any which way
 node_modules
 ./node_modules
 node_modules/
 node_modules/**/*
+
+# Uploads
+public/uploads/*

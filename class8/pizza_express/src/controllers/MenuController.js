@@ -1,4 +1,4 @@
-import Pizza from '../Models/Pizza';
+import Pizza from '../models/Pizza';
 
 class MenuController {
   index(req, res) {

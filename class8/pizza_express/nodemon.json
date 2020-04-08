@@ -1,5 +1,11 @@
 {
   "execMap": {
     "js": "node -r sucrase/register"
-  }
+  },
+  "ignore": [
+    "data/*.json",
+    "public/*",
+    "random_pizza_pics/*",
+    "filesystem_demo/*"
+  ]
 }

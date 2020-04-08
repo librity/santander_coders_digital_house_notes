@@ -1,6 +1,6 @@
-<form class="w-50" action="/orders" method="POST">
+<form class="w-50" action="/users" method="POST">
   <div class="form-group">
-    <label for="name">Seu name</label>
+    <label for="name">Seu nome</label>
 
     <input
       class="form-control"
@@ -11,25 +11,30 @@
   </div>
 
   <div class="form-group">
-    <label for="address">Seu endereço</label>
+    <label for="email">Seu email</label>
 
     <input
       class="form-control"
-      name="address"
-      id="address"
-      type="text"
+      name="email"
+      id="email"
+      type="email"
     />
   </div>
 
   <div class="form-group">
-    <label for="pizzaName">name da Pizza</label>
+    <label for="password">Senha</label>
 
-    <input class="form-control" name="pizzaName" id="pizzaName" type="text" />
+    <input
+      class="form-control"
+      type="password"
+      name="password"
+      id="password"
+    />
   </div>
 
   <div class="form-group">
     <button type="submit" class="btn btn-success">
-      Finalizar Pedido
+      Finalizar Cadastro
     </button>
   </div>
 </form>

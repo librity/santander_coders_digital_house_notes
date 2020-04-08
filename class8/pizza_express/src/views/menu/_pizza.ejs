@@ -1,9 +1,29 @@
-<div class="col-md-4 p-1">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><%= pizza.id %> - <%= pizza.nome %></h5>
+<div class="col-md-2 mb-3">
+  <div class="card" style="width: 18rem;">
+    <% if(pizza.thumbnail != undefined || pizza.thumbnail != null){%>
 
-      <p class="card-text">R$ <%= pizza.preco %></p>
+    <img
+      src="/uploads/pizzaThumbnails/<%= pizza.thumbnail %>"
+      class="card-img-top"
+      alt="Imagem da pizza"
+      style="height: 200px; object-fit: cover;"
+    />
+
+    <% } else { %>
+
+    <img
+      src="/img/default_pizza.jpg"
+      class="card-img-top"
+      alt="Imagem da pizza"
+      style="height: 200px; object-fit: cover;"
+    />
+
+    <% } %>
+
+    <div class="card-body">
+      <h5 class="card-title"><%= pizza.id %>- <%= pizza.name %></h5>
+
+      <p class="card-text">R$ <%= pizza.price %></p>
     </div>
   </div>
 </div>

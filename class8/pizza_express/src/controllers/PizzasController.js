@@ -1,4 +1,4 @@
-import Pizza from '../Models/Pizza';
+import Pizza from '../models/Pizza';
 
 class PizzasController {
   index(req, res) {
@@ -13,18 +13,19 @@ class PizzasController {
 
   create(req, res) {
     const { name, price } = req.body;
+    const [pizzaThumbnail] = req.files;
 
-    new Pizza(name, price);
+    new Pizza(name, price, pizzaThumbnail.filename);
 
-    return res.redirect('/menu');
+    return res.redirect('/pizzas');
   }
 
   deletePizza(req, res) {
-    const { id } = req.body;
+    const { id } = req.params;
 
     Pizza.destroy(id);
 
-    return res.redirect('/menu');
+    return res.redirect('/pizzas');
   }
 }
 

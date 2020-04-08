@@ -4,7 +4,7 @@ import { join } from 'path';
 const db = join('data', 'pizzas.json');
 
 class Pizza {
-  constructor(name, price) {
+  constructor(name, price, thumbnail) {
     const rawPizzas = readFileSync(db, { encoding: 'utf-8' });
 
     const empty = rawPizzas == '' || rawPizzas == '[]';
@@ -14,8 +14,14 @@ class Pizza {
     this.id = empty ? 1 : pizzas[pizzas.length - 1].id + 1;
     this.name = name;
     this.price = price;
+    this.thumbnail = thumbnail;
 
-    const newPizza = { id: this.id, name: this.name, price: this.price }
+    const newPizza = {
+      id: this.id,
+      name: this.name,
+      price: this.price,
+      thumbnail: this.thumbnail,
+    };
 
     pizzas.push(newPizza);
 
@@ -40,10 +46,10 @@ class Pizza {
   }
 
   static destroy(id) {
-    return deletePizza(id);
+    return Pizza.deletePizza(id);
   }
 
-  deletePizza(id) {
+  static deletePizza(id) {
     const rawPizzas = readFileSync(db, { encoding: 'utf-8' });
 
     const empty = rawPizzas == '' || rawPizzas == '[]';

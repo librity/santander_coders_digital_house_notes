@@ -2,18 +2,23 @@
 Pizzas
 
 <%- contentFor('body') %>
-<div class="container">
-  <section class="row p-5">
+<div class="container-fluid">
+  <h2 class="mx-5 mt-4 mb-3">Pizzas <span class="badge">🍕</span></h1>
+
+  <section class="row px-5">
     <% if(pizzas != undefined && pizzas.length > 0) { %> 
     <% pizzas.forEach(pizza =>{ %>
+      
       <%- include('./_pizza', { pizza }) %>
-    <% }) } else { %>
-
-    <h1>Não tem pizzas cadastradas no sistema!</h1>
+    
+    <% }) %>
+    <% } else { %>
+  
+      <h1>Não tem pizzas cadastradas no sistema!</h1>
 
     <% } %>
 
-    <div class="col-12 mt-5">
+    <div class="col-12 my-5">
       <a href="/pizzas/new" class="btn btn-primary">
         Cadastrar Nova pizza
       </a>

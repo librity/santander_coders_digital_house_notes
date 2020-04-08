@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "naty",
+    "email": "naty@email.com",
+    "password": "$2b$10$VlJaAf0aovjws4lIZIggXejXdkIHEpunW2C.ICmh2txGFcmNVVakK"
+  },
+  {
+    "id": 2,
+    "name": "vinicius",
+    "email": "vinicius@email.com",
+    "password": "$2b$10$kpjQv/lGB1yKS9V8nY/oA.v0yUcT6.oMJ/uPEs.sBn2vDqfvPTOb."
+  },
+  {
+    "id": 3,
+    "name": "Lusito",
+    "email": "a@b.c",
+    "password": "$2b$10$yIweJaAhJXg26Q8iMGAhNuHKPW24PTm.NxJhR4D0NvopjpeTqmKpu"
+  },
+  {
+    "id": 4,
+    "name": "Giovanni Soprano",
+    "email": "gio.soprano@messaggio.it",
+    "password": "$2b$10$PmK2Rs3UB.QWmtpcAdYBgO7cSfJERVspjUaXfTOwlN3d.5oMcasnW"
+  }
+]

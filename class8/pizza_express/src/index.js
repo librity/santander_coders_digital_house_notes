@@ -7,6 +7,7 @@ import cors from 'cors';
 import methodOverride from 'method-override';
 
 import youch from './config/youch';
+import expressSessions from './config/expressSessions';
 import router from './routes/router';
 
 const app = express();
@@ -27,6 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 app.use(methodOverride('_method'));
+app.use(expressSessions);
 
 app.use(router);
 

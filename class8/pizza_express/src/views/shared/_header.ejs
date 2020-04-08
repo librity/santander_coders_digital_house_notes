@@ -1,6 +1,16 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-    <a class="navbar-brand" href="/">Pizzaria Express</a>
+    <a class="navbar-brand" href="/">
+      <img
+        src="/img/pizza_express_logo.png"
+        alt="PizzaExpress"
+        id="pizza_express_logo"
+        class="ml-2"
+        width="100"
+        height="50"
+      />
+      Express
+    </a>
 
     <button
       class="navbar-toggler"
@@ -17,7 +27,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/menu">
+          <a class="nav-link" href="/%F0%9F%8D%95">
             Cardapio <span class="sr-only">(current)</span>
           </a>
         </li>
@@ -28,13 +38,27 @@
           </a>
         </li>
 
-        <!-- if (admin) -->
+        <li class="nav-item">
+          <a class="nav-link" href="/users/new">
+            Cadastro <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/sessions/new">
+            Login <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <% if (req.session.username) { %>
 
         <li class="nav-item">
           <a class="nav-link" href="/pizzas">
             Pizzas <span class="sr-only">(current)</span>
           </a>
         </li>
+
+        <% } %>
       </ul>
     </div>
   </nav>
