@@ -8,3 +8,4 @@
 - https://express-validator.github.io/docs/
 - https://github.com/expressjs/session
 - https://github.com/expressjs/cookie-parser
+- https://nodemailer.com/about/
