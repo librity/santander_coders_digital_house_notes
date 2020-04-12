@@ -1,6 +1,7 @@
 # Notes
 
 ## Resources
+
 - https://app.diagrams.net/ aka draw.io
 - https://www.slant.co/options/166/alternatives/~draw-io-alternatives
 - https://dev.mysql.com/downloads/workbench/
@@ -8,6 +9,14 @@
 - https://hub.docker.com/_/mysql/
 - https://dbeaver.io/
 - https://sqldbm.com/Home/
+
+## Sequelize
+
+- https://sequelize.org/v5/
+- https://sequelize.org/master/manual/migrations.html
+- https://sequelize.org/master/manual/raw-queries.html
+- https://sequelize.org/master/manual/model-basics.html
+- https://sequelize.org/master/manual/querying.html
 
 ## MySql docker container
 
