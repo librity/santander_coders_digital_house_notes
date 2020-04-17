@@ -17,6 +17,7 @@
 - https://sequelize.org/master/manual/raw-queries.html
 - https://sequelize.org/master/manual/model-basics.html
 - https://sequelize.org/master/manual/querying.html
+- https://sequelize.org/master/manual/raw-queries.html
 
 ## MySql docker container
 
