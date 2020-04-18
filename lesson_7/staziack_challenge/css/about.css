@@ -1,0 +1,79 @@
+/* About */
+
+.about_jumbotron {
+  height: 40vh;
+
+  background-image: url('/img/about-banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumbotron_title {
+  font-size: 3.2em;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Info */
+
+.info_jumbotron {
+  height: 53vh;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.info_video {
+  width: 35%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.info_container {
+  width: 50vw;
+  
+  align-self: flex-start;
+  margin-top: 3%;
+}
+
+.info_title {
+  
+  margin-bottom: 5px;
+
+  color: #5a458c;
+  font-size: 2em;
+  letter-spacing: 0.05em;
+
+}
+
+.info_content {
+  font-size: 1.4em;
+  color: #666;
+}
+
+/* Audio */
+
+.media_jumbotron {
+  height: 40vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f5f6f7;
+}
+
+.info_audio {
+  width: 500px;
+}

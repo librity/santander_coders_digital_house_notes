@@ -4,37 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles.css" />
-    <title>Home</title>
+    <link rel="shortcut icon" type="image/png" href="./img/favicon3.png" />
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+
+    <title>Landseeker - Contact</title>
   </head>
 
   <body>
-    <!--
-      Trying to recreate this project
-      https://github.com/ThomazStaziak
-      https://thomazstaziak.github.io/Template-HTML5/index.html
-      without the source code.
-    -->
-    <header>
-      <a href="index.html">
-        <img src="media/img/logo.png" width="50" />
-        <h3>Landseeker</h3>
-      </a>
+    <div class="main_container">
+      <header class="nav_header">
+        <a class="logo_container" href="index.html">
+          <img id="logo" src="./img/logo.png" width="50" />
+          <h3 id="logo_name">Landseeker</h3>
+        </a>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+        <nav class="nav_links">
+          <a class="nav_link" href="index.html">Home</a>
+          <a class="nav_link" href="about.html">About</a>
+          <a class="nav_link" href="contact.html">Contact</a>
+        </nav>
+      </header>
 
-    <main id="content">
+      <main class="content">
+        <div class="contact_container">
+          <h3 class="contact_title">Contact Us!</h3>
 
-    </main>
+          <form action="#" class="contact_form">
+            <div class="contact_form_input_container">
+              <label for="name" class="contact_form_label">Name</label>
+              <input
+                name="name"
+                id="name"
+                class="contact_form_input"
+                type="text"
+              />
+            </div>
 
-    <footer>
-      <h6>Copyright Purple Rain©</h6>
-      <p>We are in no way responsible for the use or missuse of this webapp.</p>
-    </footer>
+            <div class="contact_form_input_container">
+              <label for="email" class="contact_form_label">E-mail</label>
+              <input
+                name="email"
+                id="email"
+                class="contact_form_input"
+                type="email"
+              />
+            </div>
+
+            <div class="contact_form_input_container">
+              <label for="message" class="contact_form_label">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                class="contact_form_textarea"
+                rows="4"
+                cols="40"
+              >
+              </textarea>
+            </div>
+
+            <div class="contact_form_bottom">
+              <div class="contact_from_checkbox_container">
+                <input
+                  name="include_name"
+                  id="include_name"
+                  class="contact_from_checkbox"
+                  type="checkbox"
+                />
+                <label for="include_name" class="contact_form_label">
+                  Don't post my name
+                </label>
+              </div>
+
+              <button class="contact_form_submit" type="submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <footer class="main_footer">
+        <span class="copyright">Copyright © Digital House</span>
+      </footer>
+    </div>
   </body>
 </html>

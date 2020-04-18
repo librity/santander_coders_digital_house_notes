@@ -4,68 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles.css" />
-    <title>Home</title>
+    <link rel="shortcut icon" type="image/png" href="./img/favicon3.png" />
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Landseeker - Home</title>
   </head>
 
   <body>
-    <!--
-      Trying to recreate this project
-      https://github.com/ThomazStaziak
-      https://thomazstaziak.github.io/Template-HTML5/index.html
-      without the source code.
-    -->
-    <header>
-      <a id="logo" href="index.html">
-        <img src="media/img/logo.png" width="50" />
-        <h3>Landseeker</h3>
-      </a>
+    <div class="main_container">
+      <header class="nav_header">
+        <a class="logo_container" href="index.html">
+          <img id="logo" src="./img/logo.png" width="50" />
+          <h3 id="logo_name">Landseeker</h3>
+        </a>
 
-      <nav>
-        <a class="nav_link" href="index.html">Home</a>
-        <a class="nav_link" href="about.html">About</a>
-        <a class="nav_link" href="contact.html">Contact</a>
-      </nav>
-    </header>
+        <nav class="nav_links">
+          <a class="nav_link" href="index.html">Home</a>
+          <a class="nav_link" href="about.html">About</a>
+          <a class="nav_link" href="contact.html">Contact</a>
+        </nav>
+      </header>
 
-    <main id="content">
-      <section id="welcome">
-          <h3>The most beautiful lanscapes</h3>
-          <h2>New Orleans Forest</h3>
+      <main class="content">
+        <section class="welcome_jumbotron">
+          <div class="jumbotron_welcome">
+            <h3 class="jumbotron_overtitle">The most beautiful lanscapes</h3>
+            <h2 class="jumbotron_title">New Orleans Forest</h2>
 
-          <button>CHECK IT OUT</button>
-      </section>
+            <button class="jumbotron_button">CHECK IT OUT</button>
+          </div>
+        </section>
 
-      <section id="products">
-        <div class="product" id="product1">
-          <button>CLICK ME</button>
-        </div>
+        <section class="products">
+          <div class="product" id="product1">
+            <button class="product_button">CLICK ME</button>
+          </div>
 
-        <div class="product" id="product2">
-          <button>CLICK ME</button>
-        </div>
+          <div class="product" id="product2">
+            <button class="product_button">CLICK ME</button>
+          </div>
 
-        <div class="product" id="product3">
-          <button>CLICK ME</button>
-        </div>
+          <div class="product" id="product3">
+            <button class="product_button">CLICK ME</button>
+          </div>
 
-        <div class="product" id="product4">
-          <button>CLICK ME</button>
-        </div>
+          <div class="product" id="product4">
+            <button class="product_button">CLICK ME</button>
+          </div>
 
-        <div class="product" id="product5">
-          <button>CLICK ME</button>
-        </div>
+          <div class="product" id="product5">
+            <button class="product_button">CLICK ME</button>
+          </div>
 
-        <div class="product" id="product6">
-          <button>CLICK ME</button>
-        </div>
-      </section>
-    </main>
+          <div class="product" id="product6">
+            <button class="product_button">CLICK ME</button>
+          </div>
+        </section>
+      </main>
 
-    <footer>
-      <h6>Copyright Purple Rain©</h6>
-      <p>We are in no way responsible for the use or missuse of this webapp.</p>
-    </footer>
+      <footer class="main_footer">
+        <span class="copyright">Copyright © Digital House</span>
+      </footer>
+    </div>
   </body>
 </html>

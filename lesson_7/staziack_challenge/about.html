@@ -4,37 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles.css" />
-    <title>Home</title>
+    <link rel="shortcut icon" type="image/png" href="./img/favicon3.png" />
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+
+    <title>Landseeker - About</title>
   </head>
 
   <body>
-    <!--
-      Trying to recreate this project
-      https://github.com/ThomazStaziak
-      https://thomazstaziak.github.io/Template-HTML5/index.html
-      without the source code.
-    -->
-    <header>
-      <a href="index.html">
-        <img src="media/img/logo.png" width="50" />
-        <h3>Landseeker</h3>
-      </a>
+    <div class="main_container">
+      <header class="nav_header">
+        <a class="logo_container" href="index.html">
+          <img id="logo" src="./img/logo.png" width="50" />
+          <h3 id="logo_name">Landseeker</h3>
+        </a>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+        <nav class="nav_links">
+          <a class="nav_link" href="index.html">Home</a>
+          <a class="nav_link" href="about.html">About</a>
+          <a class="nav_link" href="contact.html">Contact</a>
+        </nav>
+      </header>
 
-    <main id="content">
+      <main class="content">
+        <section class="about_jumbotron">
+          <h2 class="jumbotron_title">About</h2>
+        </section>
 
-    </main>
+        <section class="info_jumbotron">
+          <video class="info_video"  controls>
+            <source src="./video/video-about.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
 
-    <footer>
-      <h6>Copyright Purple Rain©</h6>
-      <p>We are in no way responsible for the use or missuse of this webapp.</p>
-    </footer>
+          <div class="info_container">
+            <h3 class="info_title">Our Story</h3>
+
+            <p class="info_content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consequuntur, ullam? Cupiditate accusamus animi illum ipsam
+              placeat, dicta sequi earum tempora necessitatibus consequatur
+              iusto, sunt sed ratione exercitationem totam delectus
+              reiciendis!Facilis vel quo totam iure aut. Praesentium ut vero,
+              consequatur laudantium voluptates animi soluta quod, dolores
+              tenetur unde, officiis aliquid magni voluptatum fugit! Ad unde
+              consequuntur amet, quo vitae et?Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Consequuntur, ullam? Cupiditate
+              accusamus animi illum ipsam placeat, dicta sequi earum tempora
+              necessitatibus consequatur iusto, sunt sed ratione exercitationem
+              totam delectus reiciendis!Facilis vel quo totam iure aut.
+              Praesentium ut vero, consequatur laudantium voluptates animi
+              soluta quod, dolores tenetur unde, officiis aliquid magni
+              voluptatum fugit! Ad unde consequuntur amet, quo vitae et?Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit. ipsum dolor
+              sit amet, consectetur adipisicing elit. Consequuntur.
+            </p>
+          </div>
+        </section>
+
+        <section class="media_jumbotron">
+          <audio class="info_audio" controls>
+            <source src="./audio/music-background.mp3" type="audio/ogg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+      </main>
+
+      <footer class="main_footer">
+        <span class="copyright">Copyright © Digital House</span>
+      </footer>
+    </div>
   </body>
 </html>
