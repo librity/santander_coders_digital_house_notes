@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 5px;
+}
+
+button {
+  border: none;
+  background-color: #ffffff00;
+}
+
+#pets {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pet {
+  background-color: #f5f6f7;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#output {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #f5f6f7;
+  padding: 10px 0;
+}
