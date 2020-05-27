@@ -117,18 +117,27 @@ window.addEventListener('load', function () {
     evento.preventDefault();
 
     const nome = document.querySelector('#nome');
-    if (!nome.value)
-      console.log('Ocorreu um erro no campo nome');
+    if (!nome.value) console.log('Ocorreu um erro no campo nome');
 
     const senha = document.querySelector('#senha');
-    if (senha.value.length < 4)
-      console.log('Ocorreu um erro no campo senha');
+    if (senha.value.length < 4) console.log('Ocorreu um erro no campo senha');
   });
 });
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
-
+fetch('https://api.chucknorris.io/jokes/random')
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
-
+data = { money: "it's a hit" };
+fetch('https://api.chucknorris.io/jokes/random', {
+  method: 'POST',
+  body: JSON.stringify(data),
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 
 /* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
